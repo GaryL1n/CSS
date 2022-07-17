@@ -1,0 +1,610 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+a:visited {
+    color: transparent;
+}
+
+.display-none {
+    display: none;
+}
+
+/* 箭頭符號 */
+.arrow {
+    position: relative;
+    display: flex;
+    padding: 0 25px;
+}
+
+/* 箭頭符號選擇器 */
+.arrow::before {
+    border-radius: 100%;
+    content: '';
+    display: block;
+    left: 0;
+    position: absolute;
+    top: 0;
+    background-size: 100%;
+    background-color: #0093d0;
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+}
+
+.arrow::after {
+    border-right: 2px solid #fff;
+    border-top: 2px solid #fff;
+    content: '';
+    height: 5px;
+    left: 5px;
+    position: absolute;
+    top: 7px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 5px;
+}
+
+/* 箭頭超連結文字樣式 */
+.blueA {
+    color: rgb(0, 147, 208);
+    font-size: 15px;
+}
+
+.header {
+    height: 145px;
+    border-top: 6px solid rgb(24, 101, 190);
+}
+
+/* header裡最大層BOX */
+.header-ul-box {
+    height: 70px;
+}
+
+.header-ul {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.header-ul-li {
+    width: 25%;
+    padding-bottom: 8px;
+}
+
+/* header裡首頁(家)超連結 */
+.header-bottom {
+    border-bottom: 1px solid rgb(24, 101, 190);
+}
+
+.header-ul a {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-ul img {
+    height: 38px;
+}
+
+/* 迪士尼logo */
+.header-logo {
+    height: 55px;
+    width: 100%;
+    position: relative;
+}
+
+.header-logo a {
+    width: 78px;
+    height: 34.83px;
+    position: absolute;
+    bottom: 0px;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-logo-img {
+    width: 78px;
+    height: 34.83px;
+}
+
+/* 整個網頁除了header的區塊 */
+.all-box {
+    max-width: 1280px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+/* 滑動式卡片區塊 */
+.card-box {
+    margin-bottom: 30px;
+}
+
+/* 卡片 */
+.card {
+    width: 100%;
+    height: 368px;
+    margin: auto;
+    box-shadow: rgb(0, 0, 0) 0px 0px 8px -3px;
+}
+
+/* 卡片封面 */
+.card-bg {
+    background: url('./images/card-bg.png');
+    width: 100%;
+    height: 216px;
+    background-size: cover;
+}
+
+.card-bg2 {
+    background: url('./images/1649291147950.jpg');
+    width: 100%;
+    height: 216px;
+    background-size: cover;
+}
+
+/* 卡片下方 */
+.card-down {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 20px;
+}
+
+/* 卡片下方照片區塊 */
+.card-down-img {
+    width: 30%;
+    height: 122px;
+    margin-right: 18px;
+}
+
+/* 卡片下方文字區塊 */
+.card-word {
+    width: 70%;
+    height: 122px;
+}
+
+/* 卡片下方文字區塊內文 */
+.card-p {
+    color: rgb(51, 51, 51);
+}
+
+.card-p:nth-child(1) {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 25.5px;
+    margin-bottom: 10px;
+}
+
+.card-p:nth-child(2) {
+    font-size: 14px;
+    line-height: 21px;
+}
+
+/* 新聞區塊 */
+.news-box {
+    margin-bottom: 15px;
+}
+
+/* 新聞區塊的卡片 */
+.news-card {
+    border: 1px solid rgb(220, 220, 220);
+    margin-bottom: 5.33333px;
+    height: 102.9px;
+}
+
+/* 新聞區塊卡片的超連結 */
+.news-a {
+    display: flex;
+}
+
+/* 新聞卡片左方圖片的區塊 */
+.news-card-img {
+    width: 40%;
+    height: 102.9px;
+}
+
+/* 新聞卡片左方圖片本身 */
+.news-a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* 新聞卡片右方的文字區塊 */
+.news-card-word {
+    width: 60%;
+    height: 102.9px;
+    padding: 12px 13.333px 9.333px;
+}
+
+/* 新聞卡片右方文字區塊的標題 */
+.news-card-word-p {
+    font-size: 12px;
+    line-height: 20px;
+    color: rgb(85, 85, 85);
+    margin-bottom: 17.333px;
+}
+
+/* 新聞卡片右方文字區塊的日期 */
+.news-card-word-span {
+    color: rgb(123, 123, 123);
+    font-size: 12px;
+}
+
+/* 新聞區下方列出的區塊 */
+.news-box-list {
+    height: 20.45px;
+    padding-top: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+/* 新聞區下方列出區塊中的文字 */
+.news-box-list-word {
+    color: rgb(0, 136, 202);
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 22px;
+}
+
+/* 大卡片新聞區塊 */
+.bigCard-news {
+    border: 1px solid rgb(220, 220, 220);
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+/* 大卡片中下方區塊 */
+.bigCard-news-underbox {
+    width: 100%;
+    height: 194px;
+}
+
+/* 大卡片新聞文字區塊 */
+.bigCard-news-word {
+    padding: 24px 32px 80px;
+}
+
+/* 大卡片新聞標題 */
+.bigCard-news-word-p {
+    margin-bottom: 15px;
+    font-size: 20px;
+}
+
+/* 大卡片新聞簡介 */
+.bigCard-news-word-span {
+    font-size: 15px;
+    line-height: 22.5px;
+    color: rgb(119, 119, 119);
+}
+
+/* 大卡片新聞的看更多區塊 */
+.bigCard-news-seemore {
+    padding-top: 30px;
+}
+
+/* 迪士尼+推薦的區塊 */
+.recommend-box {
+    font-size: 24px;
+    color: rgb(51, 51, 51);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* 角色區塊 */
+.role-box {
+    display: flex;
+    justify-content: space-Around;
+    height: 132px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.role-box div {
+    display: flex;
+    flex-direction: column;
+    width: 76px;
+    padding: 0 4px;
+    text-align: center;
+}
+
+.role-box img {
+    clip-path: circle(50% at 50% 50%);
+    width: 68px;
+    margin-bottom: 7px;
+}
+
+/* 角色區塊的文字 */
+.role-box span {
+    font-size: 12px;
+    font-weight: 700;
+    color: rgb(136, 136, 136);
+}
+
+/* 大新聞區塊下方的箭頭超連結 */
+.role-box-blueA {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 52.5px;
+}
+
+/* 人氣角色商品一字排開文字 */
+.Popularity-role-box h2 {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 人氣角色商品卡片 */
+.Popularity-role-box-card {
+    width: 100%;
+    height: 460px;
+    border: 1px solid rgb(220, 220, 220);
+    margin-bottom: 30px;
+}
+
+/* 人氣角色商品圖片 */
+.Popularity-role-box img {
+    width: 100%;
+    height: 353px;
+}
+
+/* 人氣角色商品下方文字區塊 */
+.Popularity-role-box-word {
+    padding: 24px 32px 20px;
+    width: 100%;
+    height: 107px;
+}
+
+/* 人氣角色商品 文字第幾行 */
+.Popularity-role-box-word-p1 {
+    font-size: 15px;
+    line-height: 22.5px;
+}
+
+.Popularity-role-box-word-p2 {
+    font-size: 15px;
+    line-height: 22.5px;
+    font-weight: 700;
+}
+
+.Popularity-role-box-word-p3 {
+    font-size: 12px;
+    line-height: 18px;
+    color: rgb(119, 119, 119);
+}
+
+.classification {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    display: flex;
+    border: 1px solid rgb(220, 220, 220);
+}
+
+.classification div {
+    border-left-style: none;
+    border-right: 1px solid rgb(220, 220, 220);
+}
+
+.classification div img {
+    width: 100%;
+    padding: 10px 15px;
+}
+
+.ft {
+    border-top: 1px solid rgb(220, 220, 220);
+}
+
+.ft-top {
+    margin-top: 20px;
+}
+
+.ft-1 {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+.ft-1 li {
+    margin-right: 3px;
+    margin-bottom: 7px;
+}
+
+.ft-1-li {
+    border-left: 1px solid rgb(149, 149, 149);
+}
+
+.ft-1 a {
+    padding-left: 6px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+.ft-word {
+    font-size: 12px;
+    color: rgb(143, 143, 143);
+}
+
+.man {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.man img {
+    clip-path: circle(50% at 50% 50%);
+    height: 50px;
+}
+
+.man-div {
+    border: 1px solid rgb(220, 220, 220);
+    width: 16%;
+    margin: 3px;
+    height: 77.6px;
+    flex-grow: 1;
+}
+
+.man-div a {
+    display: flex;
+    align-items: center;
+    padding-left: 35px;
+    padding-top: 14px;
+}
+
+.man-div a span {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.man-word {
+    background-color: rgb(245, 247, 248);
+    height: 47px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.man-word span {
+    font-size: 18px;
+}
+
+@media screen and (min-width:800px) {
+    .display-block {
+        display: block;
+    }
+    
+    .all-box {
+        margin-right: 314px;
+        margin-left: 314px;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .card-box-RWD {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .card-box {
+        margin: 0 10px;
+        display: block;
+    }
+    .news-box ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .news-card {
+        width: 49%;
+        height: 140px;
+        margin-bottom: 16px;
+    }
+    .news-card-img {
+        width: 40%;
+        height: 140px;
+    }
+    .news-card-img img {
+        height: 98%;
+        object-fit: cover;
+    }
+    .bigCard-news-RWD {
+        display: flex;
+    }
+    .bigCard-news {
+        display: block;
+    }
+    .recommend-box {
+        height: 40px;
+        margin-bottom: 30px;
+        margin-top: 20px;
+    }
+    .recommend-box p {
+        font-size: 30px;
+    }
+    .Popularity-role-box-RWD {
+        display: flex;
+    }
+    .Popularity-role-box-card {
+        width: 50%;
+        display: block;
+    }
+    .Popularity-role-box-card-1 {
+        width: 50%;
+        height: 950px;
+    }
+    .RWD2 {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .classification div {
+        width: 25%;
+    }
+    .classification div img {
+        width: 80%;
+        padding-left: 80px;
+        padding-top: 25px;
+        padding-bottom: 20px;
+    }
+    .ft-1 li {
+        margin-bottom: 0px;
+    }
+    .role-box {
+        margin-top: 30px;
+    }
+    .header-ul-box {
+        margin-right: 292px;
+        margin-left: 292px;
+        height: 86px;
+    }
+    .header {
+        border-top: 10px solid rgb(24, 101, 190);
+        margin-bottom: 50px;
+    }
+    .header-ul img {
+        height: 56px;
+    }
+    .header-logo {
+        height: 64.31px;
+    }
+    .header-logo-img {
+        height: 64.31px;
+        width: 100%;
+    }
+    .header-logo a {
+        width: 144px;
+        height: 64.31px;
+    }
+    .header-bottom {
+        border-bottom: 3px solid rgb(24, 101, 190);
+    }
+}
+
+@media screen and (max-width:800px) {
+    .dn {
+        display: none;
+    }
+    .man-div {
+        border: 0;
+        width: 14%;
+        height: 52.5px;
+    }
+    .man-div a {
+        padding: 0;
+    }
+    .man img {
+        height: 45px;
+    }
+    .man {
+        margin-bottom: 5px;
+    }
+}
